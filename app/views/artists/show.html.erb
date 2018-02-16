@@ -1,0 +1,36 @@
+<div class="container rooms">
+  <div class="row">
+    <div class="col-sm-12">
+      <!--<header>
+      </header>-->
+
+  <div class="col-sm-8">
+      <h1><%= @artists.name %></h1>
+
+      <%j=0%>
+      <% @artists.albums.each do |x| %>
+      <%if x.name? and x.name!=""%>
+      <%j+=1%>
+      <%else%>
+      <%j%>
+      <%end%>
+      <%end%>
+      <h2>Albums(<%= j %>)</h2>
+      
+   <% @artists.albums.each do |y| %>
+     <div class="col-sm-2">
+       <div class="panel panel-default">
+          <div class="panel-body">
+           <img src="<%= y.image_url %>"  style="width: ;height: ;" >
+           <div class="details clearfix" style="text-align: center;"><h3><%= y.name %></h3></div>
+           <div class="details clearfix" style="text-align: center;"><h3><%= y.released_at %></h3></div>
+         </div>
+       </div>
+     </div>
+   <% end %>
+  </div>
+  
+  <div class="col-sm-4"><img src="<%= @artists.image_url %>" style="width: 133%;height: 347px;"></div>     
+  </div>
+  </div>
+</div>
